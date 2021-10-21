@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
 import cs from "./Statistics.module.css";
 
@@ -23,12 +23,12 @@ const Statistics = ({
   </>
 );
 
-// FeedbackOptions.propTypes = {
-//   name: PropTypes.string,
-//   tag: PropTypes.string,
-//   location: PropTypes.string,
-//   avatar: PropTypes.string,
-//   stats: PropTypes.objectOf(PropTypes.number),
-// };
+Statistics.propTypes = {
+  onGood: PropTypes.number,
+  onNeutral: PropTypes.number,
+  onBad: PropTypes.number,
+  onTotal: PropTypes.number,
+  onPositivePercentage: PropTypes.number,
+};
 
 export default Statistics;

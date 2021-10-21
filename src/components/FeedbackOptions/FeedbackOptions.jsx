@@ -1,4 +1,4 @@
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import React from "react";
 import cs from "./Feedbackoptions.module.css";
 
@@ -19,12 +19,10 @@ const FeedbackOptions = ({ onGood, onNeutral, onBad }) => (
   </>
 );
 
-// FeedbackOptions.propTypes = {
-//   name: PropTypes.string,
-//   tag: PropTypes.string,
-//   location: PropTypes.string,
-//   avatar: PropTypes.string,
-//   stats: PropTypes.objectOf(PropTypes.number),
-// };
+FeedbackOptions.propTypes = {
+  onGood: PropTypes.number,
+  onNeutral: PropTypes.number,
+  onBad: PropTypes.number,
+};
 
 export default FeedbackOptions;
