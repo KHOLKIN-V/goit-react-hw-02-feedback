@@ -31,19 +31,20 @@ class App extends Component {
   };
 
   render() {
+    const {good, neutral, bad} = this.state
     return (
       <>
             <Container>
         <FeedbackOptions options={["good", "neutral", "bad"]} onLeaveFeedback={this.totalPlus}/>
       </Container>
-      {this.countTotalFeedback(this.state.good, this.state.neutral, this.state.bad) === 0 ? <Container><Notification message="No feedback given (ಥ﹏ಥ)"/></Container> : 
+      {this.countTotalFeedback(good, neutral, bad) === 0 ? <Container><Notification message="No feedback given (ಥ﹏ಥ)"/></Container> : 
       <Container>
         <Statistics 
-        onGood={this.state.good} 
-        onNeutral={this.state.neutral} 
-        onBad={this.state.bad} 
-        onTotal={this.countTotalFeedback(this.state.good, this.state.neutral, this.state.bad)} 
-        onPositivePercentage={this.countPositiveFeedbackPercentage(this.state.good, this.state.neutral, this.state.bad)}/>
+        onGood={good} 
+        onNeutral={neutral} 
+        onBad={bad} 
+        onTotal={this.countTotalFeedback(good, neutral, bad)} 
+        onPositivePercentage={this.countPositiveFeedbackPercentage(good, neutral, bad)}/>
       </Container> }
       </>
     );
