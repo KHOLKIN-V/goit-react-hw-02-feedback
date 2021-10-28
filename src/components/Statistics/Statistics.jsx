@@ -24,11 +24,11 @@ const Statistics = ({
 );
 
 Statistics.propTypes = {
-  onGood: PropTypes.number,
-  onNeutral: PropTypes.number,
-  onBad: PropTypes.number,
-  onTotal: PropTypes.number,
-  onPositivePercentage: PropTypes.number,
+  onGood: PropTypes.number.isRequired,
+  onNeutral: PropTypes.number.isRequired,
+  onBad: PropTypes.number.isRequired,
+  onTotal: PropTypes.number.isRequired,
+  onPositivePercentage: PropTypes.number.isRequired,
 };
 
 export default Statistics;

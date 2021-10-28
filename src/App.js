@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <>
             <Container>
-        <FeedbackOptions options={["good", "neutral", "bad"]} onLeaveFeedback={this.totalPlus}/>
+        <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.totalPlus}/>
       </Container>
       {this.countTotalFeedback(good, neutral, bad) === 0 ? <Container><Notification message="No feedback given (ಥ﹏ಥ)"/></Container> : 
       <Container>
