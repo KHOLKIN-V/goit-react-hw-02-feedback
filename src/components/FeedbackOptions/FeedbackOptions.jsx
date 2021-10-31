@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { nanoid } from "nanoid";
+
 import cs from "./Feedbackoptions.module.css";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => (
@@ -9,7 +9,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => (
     <div className={cs.btnContainer}>
       {options.map((opt) => (
         <button
-          key={nanoid()}
+          key={opt}
           type="button"
           name={opt}
           className={cs.btn}
